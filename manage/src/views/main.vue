@@ -78,6 +78,7 @@ export default {
                     this.loading = false
                     this.userId = data.user.userId
                     this.userName = data.user.username
+                    localStorage.setItem('userId', data.user.userId)
                 }
             })
         }

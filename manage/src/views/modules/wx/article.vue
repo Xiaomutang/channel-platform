@@ -90,7 +90,9 @@ export default {
                     'title': this.dataForm.title,
                     'type': this.dataForm.type,
                     'sidx': 'id',
-                    'order': 'desc'
+                    'order': 'desc',
+                    'owner': localStorage.getItem('appid'),
+                    'sysUserId': localStorage.getItem('userId')
                 })
             }).then(({ data }) => {
                 if (data && data.code === 200) {

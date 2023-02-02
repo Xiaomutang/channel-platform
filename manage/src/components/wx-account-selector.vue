@@ -24,7 +24,10 @@ export default {
             this.dataListLoading = true
             this.$http({
                 url: this.$http.adornUrl('/manage/wxAccount/list'),
-                method: 'get'
+                method: 'post',
+                data: this.$http.adornParams({
+                    'sysUserId': localStorage.getItem('userId')
+                })
             }).then(({ data }) => {
                 if (data && data.code === 200) {
                     this.$store.commit('wxAccount/updateAccountList', data.list)
@@ -36,6 +39,7 @@ export default {
             })
         },
         selectAccount(appid){
+            localStorage.setItem('appid', appid)
             if(this.selectedAppid!=appid){
                 this.$store.commit('wxAccount/selectAccount', appid)
             }

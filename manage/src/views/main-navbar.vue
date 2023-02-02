@@ -1,10 +1,10 @@
 <template>
     <nav class="site-navbar" :class="'site-navbar--' + navbarLayoutType">
         <div class="site-navbar__header">
-            <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
+            <!-- <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
                 <a class="site-navbar__brand-lg" href="javascript:;">野火频道管理系统</a>
                 <a class="site-navbar__brand-mini" href="javascript:;">W</a>
-            </h1>
+            </h1> -->
         </div>
         <div class="site-navbar__body clearfix">
             <el-menu class="site-navbar__menu" mode="horizontal">

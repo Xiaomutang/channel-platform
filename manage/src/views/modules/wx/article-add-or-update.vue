@@ -118,6 +118,8 @@ export default {
                         if (data && data.code === 200) {
                             this.dataForm=data.article;
                             this.dataForm.type = data.article.type + "";
+                            this.dataForm.sysUserId = localStorage.getItem('userId');
+                            this.dataForm.owner = localStorage.getItem('appid');
                         }
                     });
                 }
